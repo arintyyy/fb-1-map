@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fakeboys/1 worldwide</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: 'Arial Narrow', Arial, sans-serif; 
+        }
+        
+        #map { 
+            height: 100vh; 
+            width: 100%;   
+        }
+
+        .leaflet-popup-content {
+            font-family: 'Arial Narrow', Arial, sans-serif; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div> 
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([41.02731, 28.97352], 5); 
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://carto.com/attributions">CartoDB</a> contributors'
+        }).addTo(map);
+
+        L.marker([41.02731, 28.97352]).addTo(map) 
+            .bindPopup('<b>Istanbul by @arintyyy 03/2025</b><br><img src="https://res.cloudinary.com/ddmasngx4/image/upload/v1742730064/IMG_2057_woie0k.jpg" alt="Istanbul" width="300">')
+            .openPopup();
+
+        L.marker([52.51635, 13.37857]).addTo(map)  
+            .bindPopup('<b>Berlin by @firewalkw1thme 03/2025</b><br><img src="https://res.cloudinary.com/ddmasngx4/image/upload/v1742729704/f07pma10wnit8wmbjfoy.jpg" alt="Berlin" width="300">')
+            .openPopup();
+
+        L.marker([55.77365, 37.66989]).addTo(map) 
+            .bindPopup('<b>Moscow, Ugol Gokuzy x fb/1 event 29/09/2024</b><br><img src="https://res.cloudinary.com/ddmasngx4/image/upload/v1742730962/IMG_5325_mwv38d.jpg" alt="Moscow" width="300">')
+            .openPopup();
+    </script>
+
+</body>
+</html>
